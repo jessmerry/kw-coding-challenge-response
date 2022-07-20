@@ -1,15 +1,15 @@
 import './App.css';
-import { Header } from './components/Header';
-import { Directions } from './components/Directions';
-import { LowerImpactPurchases } from './components/LowerImpactPurchases';
+import { LowerImpactPurchases, EachCompany } from './components/LowerImpactPurchases';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-     <Header />
-     <Directions />
-     <LowerImpactPurchases />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="EachCompany" element={<EachCompany />}></Route>
+        <Route path="/" element={<LowerImpactPurchases />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
